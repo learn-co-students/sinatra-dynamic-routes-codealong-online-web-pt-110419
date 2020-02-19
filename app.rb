@@ -19,10 +19,13 @@ class App < Sinatra::Base
      erb :goodbye
   end 
   
-  get "/multiply/:num1/:num2" do 
+  get '/multiply/:num1/:num2' do 
+     @number1 = params[:num1]
+     @number2 = params[:num2]
     
-    erb :multiply
+    erb :multiplier
+   
   end 
   
-  
+
 end
